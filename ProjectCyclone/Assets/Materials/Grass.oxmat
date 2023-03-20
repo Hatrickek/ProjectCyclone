@@ -1,0 +1,14 @@
+Material: Grass
+Parameters:
+  Roughness: 1
+  Metallic: 0
+  Specular: 0
+  Normal: 1
+  AO: 1
+  Color: [0.1093306,0.74517375,0,1]
+  UseAlbedo: 0
+  UseRoughness: 0
+  UseMetallic: 0
+  UseNormal: 0
+  UseAO: 0
+Textures: {}

@@ -1,0 +1,21 @@
+Display:
+  VSync: 1
+Color:
+  Tonemapper: 0
+  Exposure: 1
+  Gamma: 2.5
+Vignette:
+  Enabled: 1
+  Intensity: 0.25
+SSAO:
+  Enabled: 0
+  Radius: 0.2
+Bloom:
+  Enabled: 1
+  Threshold: 1
+SSR:
+  Enabled: 1
+DirectShadows:
+  Enabled: 1
+  Quality: 3
+  UsePCF: 1

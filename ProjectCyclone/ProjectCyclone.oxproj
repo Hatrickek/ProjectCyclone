@@ -1,0 +1,4 @@
+Project:
+  Name: ProjectCyclone
+  StartScene: "Scenes/Main.oxscene"
+  AssetDirectory: "Assets"

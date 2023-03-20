@@ -1,0 +1,97 @@
+Scene: Main.oxscene
+Entities:
+  - Entity: 10485513784390621757
+    TagComponent:
+      Tag: Propeller
+    RelationshipComponent:
+      Parent: 4072397468276427950
+      ChildCount: 0
+      Children: []
+    TransformComponent:
+      Translation: [0,0,0]
+      Rotation: [0,0,0]
+      Scale: [1,1,1]
+    MeshRendererComponent:
+      Mesh: 'C:\Users\Halim\Desktop\Projects\ProjectCyclone\ProjectCyclone\Assets\Objects\heli\heli.gltf'
+      SubmeshIndex: 1
+    MaterialComponent: {}
+  - Entity: 16824240142239707989
+    TagComponent:
+      Tag: Body
+    RelationshipComponent:
+      Parent: 4072397468276427950
+      ChildCount: 0
+      Children: []
+    TransformComponent:
+      Translation: [0,0,0]
+      Rotation: [0,0,0]
+      Scale: [1,1,1]
+    MeshRendererComponent:
+      Mesh: 'C:\Users\Halim\Desktop\Projects\ProjectCyclone\ProjectCyclone\Assets\Objects\heli\heli.gltf'
+      SubmeshIndex: 0
+    MaterialComponent: {}
+  - Entity: 4072397468276427950
+    TagComponent:
+      Tag: Heli
+    RelationshipComponent:
+      Parent: 0
+      ChildCount: 2
+      Children:
+        - 16824240142239707989
+        - 10485513784390621757
+    TransformComponent:
+      Translation: [0,2.9703455,0]
+      Rotation: [0,0,0]
+      Scale: [1,1,1]
+  - Entity: 929621726744524710
+    TagComponent:
+      Tag: Sun
+    RelationshipComponent:
+      Parent: 0
+      ChildCount: 0
+      Children: []
+    TransformComponent:
+      Translation: [0,21.63,-0.16874796]
+      Rotation: [1.4259338,0,0]
+      Scale: [1,0.99999994,0.99999994]
+    LightComponent:
+      Type: 0
+      UseColorTemperatureMode: 0
+      Temperature: 6570
+      Color: [1,1,1]
+      Intensity: 0
+      Range: 1
+      CutOffAngle: 0.21816616
+      OuterCutOffAngle: 0.30543262
+      ShadowQuality: 2
+  - Entity: 16193454982986332208
+    TagComponent:
+      Tag: Plane
+    RelationshipComponent:
+      Parent: 0
+      ChildCount: 0
+      Children: []
+    TransformComponent:
+      Translation: [0,0,0]
+      Rotation: [0,0,0]
+      Scale: [10,10,10]
+    MeshRendererComponent:
+      Mesh: resources/objects/plane.gltf
+      SubmeshIndex: 0
+    MaterialComponent:
+      Path: 'C:\Users\Halim\Desktop\Projects\ProjectCyclone\ProjectCyclone\Assets\Materials\Grass.oxmat'
+  - Entity: 10464116033393726364
+    TagComponent:
+      Tag: Camera
+    RelationshipComponent:
+      Parent: 0
+      ChildCount: 0
+      Children: []
+    TransformComponent:
+      Translation: [0,11,11]
+      Rotation: [-0.7853982,-1.5707964,0]
+      Scale: [0.9999963,1,0.9999963]
+    CameraComponent:
+      FOV: 45
+      NearClip: 0.01
+      FarClip: 1000
