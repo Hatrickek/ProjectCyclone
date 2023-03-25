@@ -1,5 +1,168 @@
 Scene: Main.oxscene
 Entities:
+  - Entity: 14989001968311435495
+    TagComponent:
+      Tag: Crate01
+    RelationshipComponent:
+      Parent: 0
+      ChildCount: 0
+      Children: []
+    TransformComponent:
+      Translation: [-9.900461,0.32,-12.991426]
+      Rotation: [0,0,0]
+      Scale: [1,1,1]
+    MeshRendererComponent:
+      Mesh: 'C:\Users\Halim\Desktop\Projects\ProjectCyclone\ProjectCyclone\Assets\Objects\crate1\crate.gltf'
+      SubmeshIndex: 0
+    MaterialComponent: {}
+  - Entity: 14223157318090233777
+    TagComponent:
+      Tag: Plane
+    RelationshipComponent:
+      Parent: 0
+      ChildCount: 0
+      Children: []
+    TransformComponent:
+      Translation: [5.917112,0,-15.336355]
+      Rotation: [0,0,0]
+      Scale: [5,5,5]
+    MeshRendererComponent:
+      Mesh: resources/objects/plane.gltf
+      SubmeshIndex: 0
+    MaterialComponent:
+      Path: 'C:\Users\Halim\Desktop\Projects\ProjectCyclone\ProjectCyclone\Assets\Materials\Grass.oxmat'
+  - Entity: 13830160097947337288
+    TagComponent:
+      Tag: Plane
+    RelationshipComponent:
+      Parent: 0
+      ChildCount: 0
+      Children: []
+    TransformComponent:
+      Translation: [14.154861,0,1.622054]
+      Rotation: [0,0,0]
+      Scale: [5,5,5]
+    MeshRendererComponent:
+      Mesh: resources/objects/plane.gltf
+      SubmeshIndex: 0
+    MaterialComponent:
+      Path: 'C:\Users\Halim\Desktop\Projects\ProjectCyclone\ProjectCyclone\Assets\Materials\Grass.oxmat'
+  - Entity: 4408742273044958085
+    TagComponent:
+      Tag: Plane
+    RelationshipComponent:
+      Parent: 0
+      ChildCount: 0
+      Children: []
+    TransformComponent:
+      Translation: [-13.879738,0,1.622054]
+      Rotation: [0,0,0]
+      Scale: [5,5,5]
+    MeshRendererComponent:
+      Mesh: resources/objects/plane.gltf
+      SubmeshIndex: 0
+    MaterialComponent:
+      Path: 'C:\Users\Halim\Desktop\Projects\ProjectCyclone\ProjectCyclone\Assets\Materials\Grass.oxmat'
+  - Entity: 15816501443331193625
+    TagComponent:
+      Tag: Plane
+    RelationshipComponent:
+      Parent: 0
+      ChildCount: 0
+      Children: []
+    TransformComponent:
+      Translation: [-9.610755,0,-15.322258]
+      Rotation: [0,0,0]
+      Scale: [5,5,5]
+    MeshRendererComponent:
+      Mesh: resources/objects/plane.gltf
+      SubmeshIndex: 0
+    MaterialComponent:
+      Path: 'C:\Users\Halim\Desktop\Projects\ProjectCyclone\ProjectCyclone\Assets\Materials\Grass.oxmat'
+  - Entity: 12081475465592171170
+    TagComponent:
+      Tag: Plane
+    RelationshipComponent:
+      Parent: 0
+      ChildCount: 0
+      Children: []
+    TransformComponent:
+      Translation: [0,0,0]
+      Rotation: [0,0,0]
+      Scale: [5,5,5]
+    MeshRendererComponent:
+      Mesh: resources/objects/plane.gltf
+      SubmeshIndex: 0
+    MaterialComponent:
+      Path: 'C:\Users\Halim\Desktop\Projects\ProjectCyclone\ProjectCyclone\Assets\Materials\Grass.oxmat'
+  - Entity: 5578632468639828429
+    TagComponent:
+      Tag: Crate01
+    RelationshipComponent:
+      Parent: 0
+      ChildCount: 0
+      Children: []
+    TransformComponent:
+      Translation: [4.840039,0.32,-14.674238]
+      Rotation: [0,0,0]
+      Scale: [1,1,1]
+    MeshRendererComponent:
+      Mesh: 'C:\Users\Halim\Desktop\Projects\ProjectCyclone\ProjectCyclone\Assets\Objects\crate1\crate.gltf'
+      SubmeshIndex: 0
+    MaterialComponent: {}
+    NamedComponent:
+      ComponentName: CrateComponent
+  - Entity: 10944656820024352216
+    TagComponent:
+      Tag: Crate01
+    RelationshipComponent:
+      Parent: 0
+      ChildCount: 0
+      Children: []
+    TransformComponent:
+      Translation: [14.764545,0.32,3.6167324]
+      Rotation: [0,0,0]
+      Scale: [1,1,1]
+    MeshRendererComponent:
+      Mesh: 'C:\Users\Halim\Desktop\Projects\ProjectCyclone\ProjectCyclone\Assets\Objects\crate1\crate.gltf'
+      SubmeshIndex: 0
+    MaterialComponent: {}
+    NamedComponent:
+      ComponentName: CrateComponent
+  - Entity: 12191185497796511900
+    TagComponent:
+      Tag: Crate01
+    RelationshipComponent:
+      Parent: 0
+      ChildCount: 0
+      Children: []
+    TransformComponent:
+      Translation: [-0.20972228,0.32,0.13369536]
+      Rotation: [0,0,0]
+      Scale: [1,1,1]
+    MeshRendererComponent:
+      Mesh: 'C:\Users\Halim\Desktop\Projects\ProjectCyclone\ProjectCyclone\Assets\Objects\crate1\crate.gltf'
+      SubmeshIndex: 0
+    MaterialComponent: {}
+    NamedComponent:
+      ComponentName: CrateComponent
+  - Entity: 9694110757462362602
+    TagComponent:
+      Tag: Crate01
+    RelationshipComponent:
+      Parent: 0
+      ChildCount: 0
+      Children: []
+    TransformComponent:
+      Translation: [-14.878714,0.32,0.9583756]
+      Rotation: [0,0,0]
+      Scale: [1,1,1]
+    MeshRendererComponent:
+      Mesh: 'C:\Users\Halim\Desktop\Projects\ProjectCyclone\ProjectCyclone\Assets\Objects\crate1\crate.gltf'
+      SubmeshIndex: 0
+    MaterialComponent: {}
+    NamedComponent:
+      ComponentName: CrateComponent
   - Entity: 10485513784390621757
     TagComponent:
       Tag: Propeller
@@ -52,7 +215,7 @@ Entities:
       Children: []
     TransformComponent:
       Translation: [0,21.63,-0.16874796]
-      Rotation: [1.4259338,0,0]
+      Rotation: [0.8709193,0,0]
       Scale: [1,0.99999994,0.99999994]
     LightComponent:
       Type: 0
@@ -72,9 +235,9 @@ Entities:
       ChildCount: 0
       Children: []
     TransformComponent:
-      Translation: [0,0,0]
+      Translation: [2.0657337,0,13.399397]
       Rotation: [0,0,0]
-      Scale: [10,10,10]
+      Scale: [5,5,5]
     MeshRendererComponent:
       Mesh: resources/objects/plane.gltf
       SubmeshIndex: 0
@@ -89,9 +252,26 @@ Entities:
       Children: []
     TransformComponent:
       Translation: [0,11,11]
-      Rotation: [-0.7853982,-1.5707964,0]
+      Rotation: [-0.6853983,-1.5707964,0]
       Scale: [0.9999963,1,0.9999963]
     CameraComponent:
       FOV: 45
       NearClip: 0.01
       FarClip: 1000
+  - Entity: 6821990111467047883
+    TagComponent:
+      Tag: Crate01
+    RelationshipComponent:
+      Parent: 0
+      ChildCount: 0
+      Children: []
+    TransformComponent:
+      Translation: [1.4423387,0.32,12.781763]
+      Rotation: [0,0,0]
+      Scale: [1,1,1]
+    MeshRendererComponent:
+      Mesh: 'C:\Users\Halim\Desktop\Projects\ProjectCyclone\ProjectCyclone\Assets\Objects\crate1\crate.gltf'
+      SubmeshIndex: 0
+    MaterialComponent: {}
+    NamedComponent:
+      ComponentName: CrateComponent

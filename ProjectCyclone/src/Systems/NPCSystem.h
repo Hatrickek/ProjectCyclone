@@ -1,13 +1,11 @@
 ﻿#pragma once
-#include "Core/Components.h"
+#include "Core/Systems/System.h"
 
 namespace ProjectCyclone {
-  //TODO:
-
   struct NPCComponent { };
 
-  class NPCSystem {
+  class NPCSystem : Oxylus::System {
   public:
-    static void OnUpdate(const NPCComponent& component, Oxylus::TransformComponent transform, float deltaTime);
+    void OnUpdate(Oxylus::Scene* scene);
   };
 }

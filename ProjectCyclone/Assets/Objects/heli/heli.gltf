@@ -89,29 +89,29 @@
         {
             "bufferView" : 0,
             "componentType" : 5126,
-            "count" : 2505,
+            "count" : 3238,
             "max" : [
                 0.7279624938964844,
                 2.3322484493255615,
-                1.4175570011138916
+                1.8539247512817383
             ],
             "min" : [
                 -0.7387392520904541,
-                -0.09752915799617767,
-                -4.760570049285889
+                -0.09752917289733887,
+                -4.324202537536621
             ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 1,
             "componentType" : 5126,
-            "count" : 2505,
+            "count" : 3238,
             "type" : "VEC2"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
-            "count" : 2505,
+            "count" : 3238,
             "type" : "VEC3"
         },
         {
@@ -123,29 +123,29 @@
         {
             "bufferView" : 4,
             "componentType" : 5126,
-            "count" : 429,
+            "count" : 650,
             "max" : [
-                3.28794002532959,
-                1.9398390054702759,
-                2.965982675552368
+                3.300443649291992,
+                1.9159502983093262,
+                3.3213887214660645
             ],
             "min" : [
-                -3.370642900466919,
-                1.733788013458252,
-                -3.6915721893310547
+                -3.3581392765045166,
+                1.7098993062973022,
+                -3.3361661434173584
             ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 5,
             "componentType" : 5126,
-            "count" : 429,
+            "count" : 650,
             "type" : "VEC2"
         },
         {
             "bufferView" : 6,
             "componentType" : 5126,
-            "count" : 429,
+            "count" : 650,
             "type" : "VEC3"
         },
         {
@@ -158,50 +158,50 @@
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 30060,
+            "byteLength" : 38856,
             "byteOffset" : 0,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 20040,
-            "byteOffset" : 30060,
+            "byteLength" : 25904,
+            "byteOffset" : 38856,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 30060,
-            "byteOffset" : 50100,
+            "byteLength" : 38856,
+            "byteOffset" : 64760,
             "target" : 34962
         },
         {
             "buffer" : 0,
             "byteLength" : 9822,
-            "byteOffset" : 80160,
+            "byteOffset" : 103616,
             "target" : 34963
         },
         {
             "buffer" : 0,
-            "byteLength" : 5148,
-            "byteOffset" : 89984,
+            "byteLength" : 7800,
+            "byteOffset" : 113440,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 3432,
-            "byteOffset" : 95132,
+            "byteLength" : 5200,
+            "byteOffset" : 121240,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 5148,
-            "byteOffset" : 98564,
+            "byteLength" : 7800,
+            "byteOffset" : 126440,
             "target" : 34962
         },
         {
             "buffer" : 0,
             "byteLength" : 1380,
-            "byteOffset" : 103712,
+            "byteOffset" : 134240,
             "target" : 34963
         }
     ],
@@ -213,7 +213,7 @@
     ],
     "buffers" : [
         {
-            "byteLength" : 105092,
+            "byteLength" : 135620,
             "uri" : "heli.bin"
         }
     ]

@@ -9,11 +9,21 @@
 #include "Systems/FreeCamera.h"
 #include "Systems/HeliSystem.h"
 #include "Systems/NPCSystem.h"
+#include "Systems/CrateSystem.h"
+
+#include <entt.hpp>
 
 namespace ProjectCyclone {
+  GameLayer* GameLayer::s_Instance = nullptr;
+
+  GameLayer::GameLayer() : Layer("Game Layer") {
+    s_Instance = this;
+  }
+
   GameLayer::~GameLayer() = default;
 
-  void GameLayer::OnAttach() {
+  void GameLayer::OnAttach(EventDispatcher& dispatcher) {
+    dispatcher.sink<ReloadSceneEvent>().connect<&GameLayer::OnSceneReload>(*this);
     LoadScene();
   }
 
@@ -21,31 +31,12 @@ namespace ProjectCyclone {
 
   void GameLayer::OnUpdate(float deltaTime) {
     m_Scene->OnUpdate(deltaTime);
-
-    {
-      ZoneScopedN("Heli system");
-      const auto group = m_Scene->m_Registry.view<TransformComponent, HeliComponent>();
-      for (const auto entity : group) {
-        auto&& [transform, heli] = group.get<TransformComponent, HeliComponent>(entity);
-        HeliSystem::OnUpdate(heli, deltaTime, transform);
-      }
-    }
-    {
-      ZoneScopedN("NPC system");
-      const auto group = m_Scene->m_Registry.view<TransformComponent, NPCComponent>();
-      for (const auto entity : group) {
-        /*auto&& [transform, npc] = group.get<TransformComponent, NPCComponent>(entity);*/
-      }
-    }
   }
 
   void GameLayer::OnImGuiRender() {
     RenderFinalImage();
-  }
 
-  void GameLayer::OnEvent(Event& e) {
-    EventDispatcher dispatcher(e);
-    dispatcher.Dispatch<ReloadSceneEvent>(OX_BIND_EVENT_FN(GameLayer::OnSceneReload));
+    m_GameUI.Draw(m_Scene);
   }
 
   void GameLayer::LoadScene() {
@@ -56,11 +47,22 @@ namespace ProjectCyclone {
     m_CameraEntity = m_Scene->FindEntity("Camera");
     m_CameraEntity.AddScript<FreeCamera>();
     m_Scene->FindEntity("Heli").AddComponent<HeliComponent>();
+
+    const auto view = m_Scene->m_Registry.view<NamedComponent>();
+    for (const auto entity : view) {
+      auto ent = Oxylus::Entity{entity, m_Scene.get()};
+      if (ent.GetComponent<NamedComponent>().ComponentName == "CrateComponent") {
+        ent.AddComponent<CrateComponent>();
+      }
+    }
+
+    m_Scene->AddSystem<HeliSystem>()
+           ->AddSystem<CrateSystem>();
   }
 
   bool GameLayer::OnSceneReload(ReloadSceneEvent&) {
-    OX_CORE_INFO("Scene reloaded.");
     LoadScene();
+    OX_CORE_INFO("Scene reloaded.");
     return true;
   }
 
@@ -69,7 +71,8 @@ namespace ProjectCyclone {
   Currently the final image in engine renderer is rendered to an offscreen framebuffer image.*/
   void GameLayer::RenderFinalImage() {
     static ImGuiWindowFlags flags = ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove |
-                                    ImGuiWindowFlags_NoSavedSettings;
+                                    ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoFocusOnAppearing
+                                    | ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoNavFocus;
     const ImGuiViewport* viewport = ImGui::GetMainViewport();
     ImGui::SetNextWindowPos(viewport->WorkPos);
     ImGui::SetNextWindowSize(viewport->WorkSize);

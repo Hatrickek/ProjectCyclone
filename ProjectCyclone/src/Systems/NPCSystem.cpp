@@ -1,5 +1,9 @@
 ﻿#include "NPCSystem.h"
 
 namespace ProjectCyclone {
-  void NPCSystem::OnUpdate(const NPCComponent& component, Oxylus::TransformComponent transform, float deltaTime) { }
+  using namespace Oxylus;
+
+  void NPCSystem::OnUpdate(Scene* scene) {
+    ZoneScoped("NPC System");
+  }
 }
