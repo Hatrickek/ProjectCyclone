@@ -34,7 +34,7 @@ namespace ProjectCyclone {
         transform.Translation.y += heli.Speed * Timestep::GetDeltaTime();
       }
 
-      heli.Fuel -= 0.1f * ImGui::GetIO().DeltaTime;
+      heli.Fuel -= 0.01f * ImGui::GetIO().DeltaTime;
       heli.Altitude = transform.Translation.y;
 
       auto ent = Entity{entity, scene};

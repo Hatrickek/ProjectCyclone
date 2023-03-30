@@ -30,15 +30,23 @@
 *.app
 
 # zort
-*.sln
+/.vs
+/.vscode
+/.idea
+/cmake-build-debug
+/cmake-build-dist
+/cmake-build-release
+/bin
+/bin-int
+/OxylusEditor/resources/shaders/compiled
+*.ccls
 *.vcxproj
 *.vcxproj.filters
 *.vcxproj.user
 *.DotSettings.user
-*.editorconfig
-/.vs
-/.vscode
-/cmake-build-debug
-/.idea
-/bin
-/bin-int
+build
+*.sln
+*.sln.DotSettings.user
+.editorconfig
+CMakeSettings.json
+scripts/__pycache__

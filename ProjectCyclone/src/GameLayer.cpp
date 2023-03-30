@@ -13,6 +13,8 @@
 
 #include <entt.hpp>
 
+#include "Systems/HeliCameraSystem.h"
+
 namespace ProjectCyclone {
   GameLayer* GameLayer::s_Instance = nullptr;
 
@@ -50,14 +52,15 @@ namespace ProjectCyclone {
 
     const auto view = m_Scene->m_Registry.view<NamedComponent>();
     for (const auto entity : view) {
-      auto ent = Oxylus::Entity{entity, m_Scene.get()};
+      auto ent = Entity{entity, m_Scene.get()};
       if (ent.GetComponent<NamedComponent>().ComponentName == "CrateComponent") {
         ent.AddComponent<CrateComponent>();
       }
     }
 
     m_Scene->AddSystem<HeliSystem>()
-           ->AddSystem<CrateSystem>();
+           ->AddSystem<CrateSystem>()
+           ->AddSystem<HeliCameraSystem>();
   }
 
   bool GameLayer::OnSceneReload(ReloadSceneEvent&) {
